@@ -18,8 +18,10 @@ router.post('/', async (req, res) => {
         const data = req.body;
         const newMenu = new menu(data);
         const response = await newMenu.save();
+
         console.log("Menu Fetched");
         res.status(200).json(response);
+        
     } catch (err) {
         res.status(500).json({ err: "Something went wrong" })
     }
