@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile EJS page</title>
+</head>
+<body>
+    <%- include('common/header'); %>
+    <div class="container">
+        <h1>This is Profile Page</h1>
+        <h3>My name : <%= details.name  %>  </h3>
+        <h3>My Email : <%= details.email  %>  </h3>
+        <h3>My Country : <%= details.country  %>  </h3>
+        <ul>
+            <% details.skills.forEach((languages)=>{ %>
+                    <li> <%= languages %> </li>
+
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>
